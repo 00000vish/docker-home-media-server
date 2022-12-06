@@ -20,14 +20,12 @@ Docker-Home-Media-Server creates following containers
 Docker-Home-Media-Server network configuration
 | Container | Address | Port |
 | ------ | ------ | ---- |
-| Portainer | [plugins/dropbox/README.md][PlDb] | 9443 | 
-| QBittorrent | [plugins/github/README.md][PlGh] | 8080 | 
-| Radarr | [plugins/googledrive/README.md][PlGd] | 7878 | 
-| Sonarr | [plugins/onedrive/README.md][PlOd] | 8989 | 
-| Jackett | [plugins/medium/README.md][PlMe] | 9117 | 
-| Jellyfin | [plugins/googleanalytics/README.md][PlGa] | 8096 | 
-
-
+| Portainer | 192.168.101.101 | 9443 | 
+| QBittorrent | 192.168.101.104 | 8080 | 
+| Radarr | 192.168.101.103 | 7878 | 
+| Sonarr | 192.168.101.102 | 8989 | 
+| Jackett | 192.168.101.106 | 9117 | 
+| Jellyfin | 192.168.101.105 | 8096 | 
 
 ## License
 
