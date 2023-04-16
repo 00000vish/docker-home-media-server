@@ -9,12 +9,12 @@ sudo docker compose up
 ## Containers 
 Docker-Home-Media-Server creates following containers
 
-- Portainer -  [Portainer-Website](https://www.portainer.io/)  | [Portainer Docker Image](https://hub.docker.com/r/portainer/portainer)
-- QBittorrent - [QBittorrent Website](https://www.qbittorrent.org/) | [QBittorrent Docker Image](https://hub.docker.com/r/linuxserver/qbittorrent)
-- Radarr - [Radarr Website](https://radarr.video/) | [Radarr Docker Image](https://hub.docker.com/r/linuxserver/radarr)
-- Sonarr - [Sonarr Website](https://sonarr.tv/) | [Sonarr Docker Image](https://hub.docker.com/r/linuxserver/sonarr)
-- Jackett - [Jackett Website](https://github.com/Jackett/Jackett) | [Jackett Docker Image](https://hub.docker.com/r/linuxserver/jackett)
-- Jellyfin - [Jellyfin Website](https://jellyfin.org/) | [Jellyfin Docker Image](https://hub.docker.com/r/linuxserver/jellyfin)
+- Portainer -  [Portainer-Website](https://www.portainer.io/)  | [Portainer Docker Container](https://hub.docker.com/r/portainer/portainer)
+- QBittorrent - [QBittorrent Website](https://www.qbittorrent.org/) | [QBittorrent Docker Container](https://hub.docker.com/r/linuxserver/qbittorrent)
+- Radarr - [Radarr Website](https://radarr.video/) | [Radarr Docker Container](https://hub.docker.com/r/linuxserver/radarr)
+- Sonarr - [Sonarr Website](https://sonarr.tv/) | [Sonarr Docker Container](https://hub.docker.com/r/linuxserver/sonarr)
+- Jackett - [Jackett Website](https://github.com/Jackett/Jackett) | [Jackett Docker Container](https://hub.docker.com/r/linuxserver/jackett)
+- Jellyfin - [Jellyfin Website](https://jellyfin.org/) | [Jellyfin Docker Container](https://hub.docker.com/r/linuxserver/jellyfin)
 
 ## Network
 Docker-Home-Media-Server network configuration
