@@ -30,3 +30,4 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   sudo docker compose up -d
 fi
+printf "\n\n"
