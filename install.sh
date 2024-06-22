@@ -15,7 +15,7 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-read -p "[+] Install tmux with custom config?" -n 1 -r
+read -p "[+] Install tmux with custom config? (y/n)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   sudo apt-get install tmux git -y
@@ -23,7 +23,7 @@ then
   curl https://raw.githubusercontent.com/00000vish/dotfiles/main/tmux/tmux.conf -o ~/.config/tmux/tmux.conf
 fi
 
-read -p "[+] Run docker media server?" -n 1 -r
+read -p "[+] Run docker media server? (y/n)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   sudo docker compose up -d
