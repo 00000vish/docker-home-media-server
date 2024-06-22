@@ -18,9 +18,4 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-mkdir ~/server/
-cd ~/server/
-git clone https://github.com/00000vish/Docker-Home-Media-Server
-cd ./Docker-Home-Media-Server
-
 sudo docker compose up -d
