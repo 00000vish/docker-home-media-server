@@ -23,4 +23,4 @@ cd ~/server/
 git clone https://github.com/00000vish/Docker-Home-Media-Server
 cd ./Docker-Home-Media-Server
 
-sudo docker compose up
+sudo docker compose up -d
