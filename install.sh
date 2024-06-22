@@ -4,7 +4,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt-get install tmux git -y
 
-mkdir ~/.config/tmux/
+mkdir ~/.config/tmux/ -p
 curl https://raw.githubusercontent.com/00000vish/dotfiles/main/tmux/tmux.conf -o ~/.config/tmux/tmux.conf
 
 sudo apt-get update
