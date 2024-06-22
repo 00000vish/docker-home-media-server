@@ -4,6 +4,9 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt-get install tmux git -y
 
+mkdir ~/.config/tmux/
+curl https://raw.githubusercontent.com/00000vish/dotfiles/main/tmux/tmux.conf -o ~/.config/tmux/tmux.conf
+
 sudo apt-get update
 sudo apt-get install ca-certificates curl -y
 sudo install -m 0755 -d /etc/apt/keyrings
