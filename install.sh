@@ -15,7 +15,7 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-echo \n\n
+printf "\n\n"
 read -p "[+] Install tmux with custom config? (y/n)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -24,7 +24,7 @@ then
   curl https://raw.githubusercontent.com/00000vish/dotfiles/main/tmux/tmux.conf -o ~/.config/tmux/tmux.conf
 fi
 
-echo \n\n
+printf "\n\n"
 read -p "[+] Run docker media server? (y/n)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
