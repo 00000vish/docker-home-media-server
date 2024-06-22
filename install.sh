@@ -29,7 +29,7 @@ printf "\n\n"
 read -p "[+] Install OpenVPN (y/n)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  sudo apt install openvpn
+  sudo apt install openvpn -y
 fi
 printf "\n\n"
 
