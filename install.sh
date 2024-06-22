@@ -24,6 +24,15 @@ then
   curl https://raw.githubusercontent.com/00000vish/dotfiles/main/tmux/tmux.conf -o ~/.config/tmux/tmux.conf
 fi
 
+
+printf "\n\n"
+read -p "[+] Install OpenVPN (y/n)" -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  sudo apt install openvpn
+fi
+printf "\n\n"
+
 printf "\n\n"
 read -p "[+] Run docker media server? (y/n)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
