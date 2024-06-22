@@ -1,24 +1,30 @@
 #!/usr/bin/env bash
 
+echo "[+] Updating system.... [+]"
 sudo apt-get update && sudo apt-get upgrade -y
-
-sudo apt-get install tmux git -y
-
-mkdir ~/.config/tmux/ -p
-curl https://raw.githubusercontent.com/00000vish/dotfiles/main/tmux/tmux.conf -o ~/.config/tmux/tmux.conf
-
-sudo apt-get update
 sudo apt-get install ca-certificates curl -y
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
+echo "[+] Installing Docker...[+]"
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
-
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-sudo docker compose up -d
+read -p "[+] Install tmux with custom config?" -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  sudo apt-get install tmux git -y
+  mkdir ~/.config/tmux/ -p
+  curl https://raw.githubusercontent.com/00000vish/dotfiles/main/tmux/tmux.conf -o ~/.config/tmux/tmux.conf
+fi
+
+read -p "[+] Run docker media server?" -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  sudo docker compose up -d
+fi
