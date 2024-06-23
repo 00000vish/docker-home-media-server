@@ -1,17 +1,4 @@
 services:
-  portainer:
-    container_name: portainer
-    image: portainer/portainer-ce:latest
-    restart: unless-stopped
-    ports:
-      - 9443:9443
-      - 8000:8000
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - .docker-compose-storage/portainer:/data
-    networks:
-      localhoster:
-        ipv4_address: 192.168.101.101
   sonarr:
     image: lscr.io/linuxserver/sonarr:latest
     container_name: sonarr
@@ -30,7 +17,6 @@ services:
       localhoster:
         ipv4_address: 192.168.101.102
     depends_on:
-      - portainer
       - qbittorrent
       - jackett
   radarr:
@@ -51,7 +37,6 @@ services:
       localhoster:
         ipv4_address: 192.168.101.103
     depends_on:
-      - portainer
       - qbittorrent
       - jackett
   qbittorrent:
@@ -73,8 +58,6 @@ services:
     networks:
       localhoster:
         ipv4_address: 192.168.101.104
-    depends_on:
-      - portainer
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
@@ -95,8 +78,6 @@ services:
     networks:
       localhoster:
         ipv4_address: 192.168.101.105
-    depends_on:
-      - portainer
   jackett:
     image: lscr.io/linuxserver/jackett:latest
     container_name: jackett
@@ -114,8 +95,6 @@ services:
     networks:
       localhoster:
         ipv4_address: 192.168.101.106
-    depends_on:
-      - portainer
 networks:
   localhoster:
     ipam:
