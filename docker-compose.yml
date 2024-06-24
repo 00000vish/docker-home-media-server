@@ -95,6 +95,17 @@ services:
     networks:
       localhoster:
         ipv4_address: 192.168.101.106
+  whats-my-ip:
+    image: 00000vish/docker-whats-my-ip:latest
+    container_name: whats-my-ip
+    environment:
+      - PORT=3000
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    networks:
+      localhoster:
+        ipv4_address: 192.168.101.107
 networks:
   localhoster:
     ipam:
