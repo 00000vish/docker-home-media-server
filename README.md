@@ -15,7 +15,7 @@ Docker-Home-Media-Server creates following containers
 - Sonarr - [Sonarr Website](https://sonarr.tv/) | [Sonarr Docker Image ](https://hub.docker.com/r/linuxserver/sonarr)
 - Jackett - [Jackett Website](https://github.com/Jackett/Jackett) | [Jackett Docker Image ](https://hub.docker.com/r/linuxserver/jackett)
 - Jellyfin - [Jellyfin Website](https://jellyfin.org/) | [Jellyfin Docker Image ](https://hub.docker.com/r/linuxserver/jellyfin)
-- docker-whats-my-ip - [Jellyfin Website](https://jellyfin.org/) | [docker-whats-my-ip Docker Image ](https://github.com/00000vish/docker-whats-my-ip)
+- docker-whats-my-ip - [docker-whats-my-ip Github ](https://github.com/00000vish/docker-whats-my-ip)
 
 ## Network
 
