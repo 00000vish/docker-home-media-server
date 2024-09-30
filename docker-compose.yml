@@ -29,6 +29,7 @@ services:
       # https://github.com/qdm12/gluetun-wiki/tree/main/setup/providers
       - VPN_SERVICE_PROVIDER=nordvpn
       - VPN_TYPE=wireguard
+      - SERVER_COUNTRIES=United States
       - UPDATER_PERIOD=24h
 
   sonarr:
