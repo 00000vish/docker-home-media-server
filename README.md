@@ -19,7 +19,7 @@ Edit the Gluetun enviroment variables according to the [Gluetun wiki](https://gi
 | QBittorrent | 8080 |
 | Radarr | 7878 |
 | Sonarr | 8989 |
-| Jackett | 9117 |
+| FlareSolverr | 8191 |
 | Prowlarr | 9696 |
 
 ## Containers
@@ -27,7 +27,7 @@ Edit the Gluetun enviroment variables according to the [Gluetun wiki](https://gi
 - QBittorrent - [QBittorrent Website](https://www.qbittorrent.org/) | [QBittorrent Docker Image](https://hub.docker.com/r/linuxserver/qbittorrent)
 - Radarr - [Radarr Website](https://radarr.video/) | [Radarr Docker Image](https://hub.docker.com/r/linuxserver/radarr)
 - Sonarr - [Sonarr Website](https://sonarr.tv/) | [Sonarr Docker Image](https://hub.docker.com/r/linuxserver/sonarr)
-- Jackett - [Jackett Website](https://github.com/Jackett/Jackett) | [Jackett Docker Image](https://hub.docker.com/r/linuxserver/jackett)
+- FlareSolverr - [FlareSolverr Website](https://github.com/flaresolverr/flaresolverr) | [FlareSolverr Docker Image](https://hub.docker.com/r/flaresolverr/flaresolverr)
 - Jellyfin - [Jellyfin Website](https://jellyfin.org/) | [Jellyfin Docker Image](https://hub.docker.com/r/linuxserver/jellyfin)
 - Prowlarr - [Prowlarr Website](https://prowlarr.com/) | [Prowlarr Docker Image](https://hub.docker.com/r/linuxserver/prowlarr)
 - Gluetun - [Gluetun Website](https://github.com/qdm12/gluetun) | [Gluetun Docker Image](https://hub.docker.com/r/qmcgaw/gluetun)
