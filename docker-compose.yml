@@ -137,7 +137,6 @@ services:
     container_name: whats-my-ip
     environment:
       - PORT=3000
-    ports:
     restart: unless-stopped
     network_mode: service:gluetun
     depends_on:
