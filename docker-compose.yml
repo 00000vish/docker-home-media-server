@@ -25,7 +25,7 @@ services:
     volumes:
       - ./.docker-compose-storage/gluetun:/gluetun
     environment:
-      # https://github.com/qdm12/gluetun-wiki/tree/main/setup#setup
+      # https://github.com/qdm12/gluetun-wiki/tree/main/setup/providers
       - VPN_SERVICE_PROVIDER=nordvpn
       - VPN_TYPE=wireguard
       - UPDATER_PERIOD=24h
@@ -77,10 +77,6 @@ services:
     volumes:
       - ./.docker-compose-storage/qbitorrent/config:/config
       - ./.docker-compose-storage/qbitorrent/downloads:/downloads
-    ports:
-      - 8080:8080
-      - 6881:6881
-      - 6881:6881/udp
     restart: unless-stopped
     network_mode: service:gluetun
     depends_on:
