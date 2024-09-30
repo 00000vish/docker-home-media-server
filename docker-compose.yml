@@ -3,6 +3,7 @@ services:
     image: qmcgaw/gluetun
     container_name: gluetun
     hostname: gluetun
+    restart: unless-stopped
     cap_add:
       - NET_ADMIN
     devices:
@@ -29,7 +30,7 @@ services:
       - VPN_SERVICE_PROVIDER=nordvpn
       - VPN_TYPE=wireguard
       - UPDATER_PERIOD=24h
-      
+
   sonarr:
     image: lscr.io/linuxserver/sonarr:latest
     container_name: sonarr
@@ -47,7 +48,7 @@ services:
       - gluetun
       - qbittorrent
       - jackett
-      
+
   radarr:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
@@ -65,7 +66,7 @@ services:
       - gluetun
       - qbittorrent
       - jackett
-  
+
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
@@ -81,7 +82,7 @@ services:
     network_mode: service:gluetun
     depends_on:
       - gluetun
-  
+
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
@@ -113,7 +114,7 @@ services:
     network_mode: service:gluetun
     depends_on:
       - gluetun
-  
+
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
@@ -127,7 +128,7 @@ services:
     network_mode: service:gluetun
     depends_on:
       - gluetun
-  
+
   whats-my-ip:
     image: 00000vish/docker-whats-my-ip:latest
     container_name: whats-my-ip
