@@ -9,6 +9,8 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
+      - 445:445 # samba
+      - 3001:3000 # clipboard
       - 8989:8989 # sonarr
       - 7878:7878 # radarr
       - 9696:9696 # prowlarr
@@ -128,6 +130,29 @@ services:
   whats-my-ip:
     image: 00000vish/docker-whats-my-ip:latest
     container_name: whats-my-ip
+    environment:
+      - PORT=3000
+    restart: unless-stopped
+    network_mode: service:gluetun
+    depends_on:
+      - gluetun
+      
+  docker-samba:
+    image: 00000vish/docker-samba:latest
+    container_name: docker-samba
+    environment:
+      - USERNAME=CHANGE-ME
+      - PASSWORD=CHANGE-ME
+    volumes:
+      - ./storage:/storage
+    restart: unless-stopped
+    network_mode: service:gluetun
+    depends_on:
+      - gluetun
+
+  docker-clipboard:
+    image: 00000vish/docker-clipboard:latest
+    container_name: docker-clipboard
     environment:
       - PORT=3000
     restart: unless-stopped
