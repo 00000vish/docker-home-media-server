@@ -1,10 +1,12 @@
 # Docker-Home-Media-Server
 
-Docker-Home-Media-Server docker compose file automates setting up home media server with Radarr, Sonarr, Jackett, QBittorrent, and Jellyfin.
+Home media server setup using Radarr, Sonarr, Prowlarr, QBittorrent, and Jellyfin.
 
 ## Gluetun VPN Setup
 
 Edit the Gluetun enviroment variables according to the [Gluetun wiki](https://github.com/qdm12/gluetun-wiki/tree/main/setup/providers).
+
+(*No VPN? checkout branch => `main-no-vpn`*)
 
 # Run
 
