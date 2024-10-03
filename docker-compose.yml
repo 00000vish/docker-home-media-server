@@ -10,7 +10,7 @@ services:
       - /dev/net/tun:/dev/net/tun
     ports:
       - 445:445 # samba
-      - 3001:3000 # clipboard
+      - 3001:3001 # clipboard
       - 8989:8989 # sonarr
       - 7878:7878 # radarr
       - 9696:9696 # prowlarr
@@ -154,7 +154,7 @@ services:
     image: 00000vish/docker-clipboard:latest
     container_name: docker-clipboard
     environment:
-      - PORT=3000
+      - PORT=3001
     restart: unless-stopped
     network_mode: service:gluetun
     depends_on:
