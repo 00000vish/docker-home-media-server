@@ -16,6 +16,7 @@ services:
       - 9696:9696 # prowlarr
       - 3000:3000 # whats-my-ip
       - 8191:8191 # flaresolverr
+      - 8265:8265 # tdarr
       # qbittorrent 
       - 8080:8080 
       - 6881:6881 
@@ -175,7 +176,8 @@ services:
       - internalNode=true
       - inContainer=true
       - ffmpegVersion=6
-      - nodeName=MyInternalNode
+      - nodeName=server
+
     volumes:
       - ./.docker-compose-storage/tdarr/server:/app/server
       - ./.docker-compose-storage/tdarr/configs:/app/configs
